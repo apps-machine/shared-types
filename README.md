@@ -6,9 +6,13 @@ Shared Zod schemas and TypeScript types used across all [Apps Machine](https://g
 
 ```bash
 bun add @apps-machine/shared-types
-# or
-npm install @apps-machine/shared-types
 ```
+
+> **M1 status — Bun-only consumption.** Until milestone M7 ships a compiled `dist/`
+> with `.js` + `.d.ts`, this package re-exports `.ts` source. Node consumers without
+> a TS loader (tsx, ts-node) cannot import it directly. Track [M7 npm publish
+> strategy](https://github.com/apps-machine/selection-agent#milestones) for the
+> Node-compatible build.
 
 ## Usage
 
