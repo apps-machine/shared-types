@@ -1,0 +1,26 @@
+{
+  "name": "@apps-machine/shared-types",
+  "version": "0.0.1",
+  "description": "Shared Zod schemas and TypeScript types for Apps Machine OSS components.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": ["src", "LICENSE", "README.md"],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true"
+  },
+  "keywords": ["apps-machine", "zod", "schemas"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/apps-machine/shared-types.git" },
+  "homepage": "https://github.com/apps-machine/shared-types#readme",
+  "bugs": { "url": "https://github.com/apps-machine/shared-types/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "bun": ">=1.0.0" },
+  "dependencies": { "zod": "^3.23.8" },
+  "devDependencies": { "@types/bun": "latest", "typescript": "^5.5.0" }
+}
