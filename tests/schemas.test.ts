@@ -1,9 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import {
-  JudgeResultSchema,
-  RawAppDataSchema,
-  StoreSchema,
-} from "../src/index.js";
+import { JudgeResultSchema, RawAppDataSchema, StoreSchema } from "../src/index.js";
 
 describe("RawAppDataSchema", () => {
   const valid = {
@@ -53,15 +49,9 @@ describe("JudgeResultSchema", () => {
       modelId: "claude-sonnet-4-6",
       judgedAt: "2026-04-28T00:00:00.000Z",
     };
-    expect(() =>
-      JudgeResultSchema.parse({ ...base, localizationGap: 11 }),
-    ).toThrow();
-    expect(() =>
-      JudgeResultSchema.parse({ ...base, localizationGap: -1 }),
-    ).toThrow();
-    expect(() =>
-      JudgeResultSchema.parse({ ...base, localizationGap: 7 }),
-    ).not.toThrow();
+    expect(() => JudgeResultSchema.parse({ ...base, localizationGap: 11 })).toThrow();
+    expect(() => JudgeResultSchema.parse({ ...base, localizationGap: -1 })).toThrow();
+    expect(() => JudgeResultSchema.parse({ ...base, localizationGap: 7 })).not.toThrow();
   });
 });
 
