@@ -1,6 +1,7 @@
 {
   "name": "@apps-machine/shared-types",
   "version": "0.0.1",
+  "private": true,
   "description": "Shared Zod schemas and TypeScript types for Apps Machine OSS components.",
   "type": "module",
   "main": "./src/index.ts",
